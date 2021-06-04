@@ -21,7 +21,7 @@
             <div class="col-md-8 offset-md-2">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title"><i class="fas fa-bullhorn"></i> ค้นหา QR Code ห้องเรียน</h3>
+                        <h3 class="card-title"><i class="fas fa-bullhorn"></i> ค้นหา QR Code ห้องประจำชั้น</h3>
                     </div>
                     <div class="card-body">
                     <form class="form-horizontal" method="post" action="<?php $_SERVER['SCRIPT_NAME']; ?>">
