@@ -11,7 +11,7 @@ $room = $_POST['room'];
 $class = !empty($class) ? "$class" : NULL;
 $room = !empty($room) ? "$room" : NULL;
 
-    $sql =  "UPDATE rt_teacher SET
+    $sql =  "UPDATE teacher SET
             regid = '$regid',
             name = '$name',
             section = '$section',

@@ -37,7 +37,7 @@
                                 <select class="form-control" id="section" name="section" required>
                                 <option value="">เลือกกลุ่มสาระฯ</option>
                                 <?php
-                                    $sql = "SELECT * FROM rt_group";
+                                    $sql = "SELECT * FROM team";
                                     $query = mysqli_query($conn, $sql);
                                     while($result = mysqli_fetch_array($query)){
                                 ?>
@@ -62,7 +62,7 @@
                                 <select class="form-control" id="class" name="class">
                                 <option value="">เลือกชั้นเรียน</option>
                                 <?php
-                                    $sql = "SELECT * FROM rt_class";
+                                    $sql = "SELECT * FROM class";
                                     $query = mysqli_query($conn, $sql);
                                     while($result = mysqli_fetch_array($query)){
                                 ?>
@@ -77,7 +77,7 @@
                                 <select class="form-control" id="room" name="room">
                                 <option value="">เลือกห้องเรียน</option>
                                 <?php
-                                    $sql = "SELECT * FROM rt_room";
+                                    $sql = "SELECT * FROM room";
                                     $query = mysqli_query($conn, $sql);
                                     while($result = mysqli_fetch_array($query)){
                                 ?>

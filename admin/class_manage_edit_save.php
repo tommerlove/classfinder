@@ -5,7 +5,7 @@ $id = $_POST['id'];
 $name = $_POST['class_name'];
 
 
-    $sql =  "UPDATE rt_class SET
+    $sql =  "UPDATE class SET
             class_name = '$name'
             WHERE id = '$id' ";
     $query = mysqli_query($conn, $sql) or die ("ข้อมูลผิดพลาด : $sql " . mysqli_error($conn));

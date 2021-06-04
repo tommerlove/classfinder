@@ -33,7 +33,7 @@
                         </thead>
                         <tbody>
                             <?php
-                                $s1 = "SELECT * FROM rt_class";
+                                $s1 = "SELECT * FROM class";
                                 $q1 = mysqli_query($conn,$s1);
                                 while($r1 = mysqli_fetch_array($q1)){
                             ?>

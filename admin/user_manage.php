@@ -36,11 +36,11 @@
                         </thead>
                         <tbody>
                             <?php
-                                $s1 = "SELECT * FROM rt_teacher";
+                                $s1 = "SELECT * FROM teacher";
                                 $q1 = mysqli_query($conn,$s1);
                                 while($r1 = mysqli_fetch_array($q1)){
                                     $sec = $r1['section'];
-                                    $s2 = "SELECT * FROM rt_group WHERE id = '$sec' ";
+                                    $s2 = "SELECT * FROM team WHERE id = '$sec' ";
                                     $q2 = mysqli_query($conn, $s2) or die ("ข้อมูลผิดพลาด : $s2 " . mysqli_error($conn));
                                     $r2 = mysqli_fetch_array($q2); 
                             ?>

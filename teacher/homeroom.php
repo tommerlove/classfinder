@@ -23,7 +23,7 @@
                     <h3 class="card-title">ช่องทางติดต่อห้องประจำชั้น [ม.<?php echo $class.'/'.$room; ?>]</h3>
                 </div>
                 <div class="card-body">
-                <form class="form-horizontal formular" name="form1" id="confirm-form" <?php /*action="main.php?page=cloth_save&regid=<?php echo $regid; ?>"*/ ?> method="post" enctype="multipart/form-data">
+                <form class="form-horizontal formular" name="form1" id="confirm-form" method="post" enctype="multipart/form-data">
                 <input type="hidden" id="regid" name="regid" value="<?php echo $regid; ?>">
                 <?php
                     $s1 = "SELECT * FROM homeroom WHERE regid = '$regid' " ;
@@ -35,7 +35,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>กลุ่ม Line ผู้ปกครอง</label>
-                                <input type="text" class="form-control" id="homeroom_line_par" name="homeroom_line_par" <?php if($regid == $empCid){ ?> value="<?php echo $r1['homeroom_line_par']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="homeroom_line_par" name="homeroom_line_par" <?php if($regid == $empCid){ ?> value="<?php echo $r1['homeroom_line_par']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>กลุ่ม Line นักเรียน</label>
-                                <input type="text" class="form-control" id="homeroom_line_stu" name="homeroom_line_stu" <?php if($regid == $empCid){ ?> value="<?php echo $r1['homeroom_line_stu']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="homeroom_line_stu" name="homeroom_line_stu" <?php if($regid == $empCid){ ?> value="<?php echo $r1['homeroom_line_stu']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Classroom</label>
-                                <input type="text" class="form-control" id="homeroom_gg" name="homeroom_gg" <?php if($regid == $empCid){ ?> value="<?php echo $r1['homeroom_gg']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="homeroom_gg" name="homeroom_gg" <?php if($regid == $empCid){ ?> value="<?php echo $r1['homeroom_gg']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>

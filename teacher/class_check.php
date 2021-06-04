@@ -99,7 +99,7 @@
                                     <td>
                                     <center>
                                         <?php 
-                                            $s2 = "SELECT * FROM data WHERE id = '".$r1['subject_id']."' ";
+                                            $s2 = "SELECT * FROM course WHERE id = '".$r1['subject_id']."' ";
                                             $q2 = mysqli_query($conn, $s2);
                                             $r2 = mysqli_fetch_array($q2);
 

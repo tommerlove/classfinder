@@ -3,7 +3,7 @@ include("../connect.php");
 
 $name = $_POST['class_name'];
 
-    $sql =  "INSERT INTO rt_class (class_name) VALUES ('$name')";
+    $sql =  "INSERT INTO class (class_name) VALUES ('$name')";
     $query = mysqli_query($conn, $sql) or die ("ข้อมูลผิดพลาด : $sql " . mysqli_error($conn));
     
 if($query) {

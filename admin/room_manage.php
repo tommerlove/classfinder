@@ -33,7 +33,7 @@
                         </thead>
                         <tbody>
                             <?php
-                                $s1 = "SELECT * FROM rt_room";
+                                $s1 = "SELECT * FROM room";
                                 $q1 = mysqli_query($conn,$s1);
                                 while($r1 = mysqli_fetch_array($q1)){
                             ?>
@@ -101,7 +101,6 @@
                         })
                     },
                     error:function(data){
-                        //Error Message == 'Title', 'Message body', Last one leave as it is
                         Swal.fire("โอ๊ะโอ", "พบข้อผิดพลาดกรุณาตรวจสอบอีกครั้ง :(", "error");
                 }
             });

@@ -3,7 +3,7 @@
         $id = $_GET['id'];
     }
 
-    $s1 = "SELECT * FROM rt_teacher WHERE id = '$id' ";
+    $s1 = "SELECT * FROM teacher WHERE id = '$id' ";
     $q1 = mysqli_query($conn, $s1);
     $r1 = mysqli_fetch_array($q1);
     $section = $r1['section'];
@@ -49,7 +49,7 @@
                                 <select class="form-control" id="section" name="section" required>
                                 <option value="">เลือกกลุ่มสาระฯ</option>
                                 <?php
-                                    $sql = "SELECT * FROM rt_group";
+                                    $sql = "SELECT * FROM team";
                                     $query = mysqli_query($conn, $sql);
                                     while($result = mysqli_fetch_array($query)){
                                         if($section == $result["id"]) {
@@ -79,7 +79,7 @@
                                 <select class="form-control" id="class" name="class">
                                 <option value="">เลือกชั้นเรียน</option>
                                 <?php
-                                    $sql = "SELECT * FROM rt_class";
+                                    $sql = "SELECT * FROM class";
                                     $query = mysqli_query($conn, $sql);
                                     while($result = mysqli_fetch_array($query)){
                                         if($r1['class'] == $result["id"]) {
@@ -99,7 +99,7 @@
                                 <select class="form-control" id="room" name="room">
                                 <option value="">เลือกห้องเรียน</option>
                                 <?php
-                                    $sql = "SELECT * FROM rt_room";
+                                    $sql = "SELECT * FROM room";
                                     $query = mysqli_query($conn, $sql);
                                     while($result = mysqli_fetch_array($query)){
                                         if($r1['room'] == $result["id"]) {

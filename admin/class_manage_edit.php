@@ -3,7 +3,7 @@
         $id = $_GET['id'];
     }
 
-    $s1 = "SELECT * FROM rt_class WHERE id = '$id' ";
+    $s1 = "SELECT * FROM class WHERE id = '$id' ";
     $q1 = mysqli_query($conn, $s1);
     $r1 = mysqli_fetch_array($q1);
 ?>

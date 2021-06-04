@@ -32,7 +32,7 @@ include("../connect.php");
  //======End Get data from Excel======================//        
 
 //==================Insert To DB ====================================//
-	$sql = " INSERT INTO rt_teacher (";			
+	$sql = " INSERT INTO teacher (";			
 	$sql .= " regid, ";
 	$sql .=	" name, ";
 	$sql .=	" section, ";	

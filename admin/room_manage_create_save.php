@@ -3,7 +3,7 @@ include("../connect.php");
 
 $name = $_POST['room_name'];
 
-    $sql =  "INSERT INTO rt_room (room_name) VALUES ('$name')";
+    $sql =  "INSERT INTO room (room_name) VALUES ('$name')";
     $query = mysqli_query($conn, $sql) or die ("ข้อมูลผิดพลาด : $sql " . mysqli_error($conn));
     
 if($query) {

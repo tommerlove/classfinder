@@ -46,7 +46,7 @@
                                 <select class="form-control select2" style="width: 100%;" id="subject_id" name="subject_id">
                                 <option selected="">คุณยังไม่เลือกวิชา</option>
                                 <?php
-                                    $strSQL = "SELECT * FROM data WHERE section = '$sec' OR section='10' ";
+                                    $strSQL = "SELECT * FROM course WHERE section = '$sec' OR section='10' ";
                                     $objQuery = mysqli_query($conn, $strSQL);
                                     while ($objResult = mysqli_fetch_array($objQuery)) {
                                         if($subjectDbId == $objResult["id"]) {
@@ -108,7 +108,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>กลุ่ม Facebook</label>
-                                <input type="text" class="form-control" id="fb" name="fb" <?php if($regid == $empCid){ ?> value="<?php echo $r1['fb']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="fb" name="fb" <?php if($regid == $empCid){ ?> value="<?php echo $r1['fb']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>กลุ่ม Line</label>
-                                <input type="text" class="form-control" id="line" name="line" <?php if($regid == $empCid){ ?> value="<?php echo $r1['line']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="line" name="line" <?php if($regid == $empCid){ ?> value="<?php echo $r1['line']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Google Classroom</label>
-                                <input type="text" class="form-control" id="gg" name="gg" <?php if($regid == $empCid){ ?> value="<?php echo $r1['gg']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="gg" name="gg" <?php if($regid == $empCid){ ?> value="<?php echo $r1['gg']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>

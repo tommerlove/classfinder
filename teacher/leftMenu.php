@@ -13,7 +13,7 @@ include("connect.php");
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Logo -->
     <a href="index.php" class="brand-link">
-      <img src="../dist/img/<?php echo $r2['logo_school']; ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="../dist/img/<?php echo $r2['icon_school']; ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light"><?php echo $r1['school_name']; ?></span>
     </a>
 
@@ -28,8 +28,6 @@ include("connect.php");
                 <a href="#" class="d-block"><?php echo $department; ?></a>
             </div>
         </div>
-
-
 
       <!-- Sidebar Menu -->
         <nav class="mt-2">

@@ -78,7 +78,6 @@ $(document).ready(function(){
             })
         },
         error:function(data){
-            //Error Message == 'Title', 'Message body', Last one leave as it is
             Swal.fire("โอ๊ะโอ", "พบข้อผิดพลาดกรุณาตรวจสอบ :(", "error");
         }
         });

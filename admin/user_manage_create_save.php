@@ -10,7 +10,7 @@ $room = $_POST['room'];
 $class = !empty($class) ? "$class" : NULL;
 $room = !empty($room) ? "$room" : NULL;
 
-    $sql =  "INSERT INTO rt_teacher (regid,name,section,class,room)
+    $sql =  "INSERT INTO teacher (regid,name,section,class,room)
             VALUES ('$regid','$name','$section','$class','$room')";
     $query = mysqli_query($conn, $sql) or die ("ข้อมูลผิดพลาด : $sql " . mysqli_error($conn));
     

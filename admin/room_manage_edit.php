@@ -3,7 +3,7 @@
         $id = $_GET['id'];
     }
 
-    $s1 = "SELECT * FROM rt_room WHERE id = '$id' ";
+    $s1 = "SELECT * FROM room WHERE id = '$id' ";
     $q1 = mysqli_query($conn, $s1);
     $r1 = mysqli_fetch_array($q1);
 ?>
@@ -38,6 +38,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>แก้ไขห้องเรียน :</label>
+                                <input type="hidden" id="id" name="id" value="<?php echo $r1['id']; ?>">
                                 <input type="text" class="form-control" id="room_name" name="room_name" value="<?php echo $r1['room_name']; ?>" placeholder="ใส่ตัวเลขเท่านั้น" required>
                             </div>
                         </div>

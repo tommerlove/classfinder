@@ -23,7 +23,7 @@
                     <h3 class="card-title">ช่องทางติดต่อนักเรียนรายวิชา</h3>
                 </div>
                 <div class="card-body">
-                <form class="form-horizontal formular" name="form1" id="confirm-form" <?php /*action="main.php?page=cloth_save&regid=<?php echo $regid; ?>"*/ ?> method="post" enctype="multipart/form-data">
+                <form class="form-horizontal formular" name="form1" id="confirm-form" method="post" enctype="multipart/form-data">
                 <input type="hidden" id="regid" name="regid" value="<?php echo $regid; ?>">
                     <div class="row">
                         <div class="col-lg-12">
@@ -32,7 +32,7 @@
                                 <select class="form-control select2" style="width: 100%;" id="subject_id" name="subject_id">
                                 <option selected="">คุณยังไม่เลือกวิชา</option>
                                 <?php
-                                    $strSQL = "SELECT * FROM rt_data WHERE section = '$sec' OR section='sec10' ";
+                                    $strSQL = "SELECT * FROM course WHERE section = '$sec'";
                                     $objQuery = mysqli_query($conn, $strSQL);
                                     while ($objResult = mysqli_fetch_array($objQuery)) {
                                 ?>
@@ -80,7 +80,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>กลุ่ม Facebook</label>
-                                <input type="text" class="form-control" id="fb" name="fb" <?php if($regid == $empCid){ ?> value="<?php echo $r1['fb']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="fb" name="fb" <?php if($regid == $empCid){ ?> value="<?php echo $r1['fb']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>กลุ่ม Line</label>
-                                <input type="text" class="form-control" id="line" name="line" <?php if($regid == $empCid){ ?> value="<?php echo $r1['line']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="line" name="line" <?php if($regid == $empCid){ ?> value="<?php echo $r1['line']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label>Google Classroom</label>
-                                <input type="text" class="form-control" id="gg" name="gg" <?php if($regid == $empCid){ ?> value="<?php echo $r1['gg']; ?>" <?php } ?> placeholder="นำ link url มาวาง">
+                                <input type="text" class="form-control" id="gg" name="gg" <?php if($regid == $empCid){ ?> value="<?php echo $r1['gg']; ?>" <?php } ?> placeholder="นำ link url มาวาง" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                                 <td>
                                 <center>
                                     <?php 
-                                        $s3 = "SELECT * FROM data WHERE id = '".$r2['subject_id']."' ";
+                                        $s3 = "SELECT * FROM course WHERE id = '".$r2['subject_id']."' ";
                                         $q3 = mysqli_query($conn, $s3);
                                         $r3 = mysqli_fetch_array($q3);
 
